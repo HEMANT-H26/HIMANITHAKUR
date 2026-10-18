@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #000; 
+    color: #fff;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    z-index: 100;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-login {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-cta-small {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-cta-small:hover {
+    background-color: #e5e5e5;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bg-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; 
+    animation: smoothFadeSlider 15s infinite ease-in-out; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: -1; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; 
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); 
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-cta-large {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 18px 40px;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-cta-large:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.02); 
+}
+
+.sub-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.instagram-link, .snapchat-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    text-decoration: none;
+    color: #fff;
+}
+
+.insta-icon, .snapchat-icon {
+    width: 20px;    
+    height: 20px;   
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+    .hero-content {
+        margin-top: 60px;
+    }
+}
+
+@keyframes smoothFadeSlider {
+    0%, 25% {
+        background-image: url('HIMANI.png');
+        opacity: 1;
+    }
+    30% { opacity: 0.2; } 
+
+    35%, 60% {
+        background-image: url('HEMANT.png');
+        opacity: 1;
+    }
+    65% { opacity: 0.2; }
+
+    70%, 95% {
+        background-image: url('HIMANI.png');
+        opacity: 1;
+    }
+    98%, 100% { opacity: 0.2; }
+
+    35%, 60% {
+        background-image: url('HEMANT.png');
+        opacity: 1;
+    }
+    65% { opacity: 0.2; }
+    }
+/* --- EXTRA ADVANCED UPGRADES --- */
+
+.service-card {
+    background: #0d0d0d !important;
+    border: 1px solid #1a1a1a !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.03);
+    background: #111111 !important;
+}
+
+/* --- CONTACT SECTION STYLES (GLASSMORPHISM 2.0) --- */
+.contact-section {
+    padding: 120px 50px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 45px;
+}
+
+.glass-form {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-submit {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e5e5e5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    text-align: center !important;
+}
+
+@media (max-width: 600px) {
+    .glass-form {
+        padding: 25px;
+    }
+    .contact-title {
+        font-size: 2rem;
+    }
+}
+/* --- 4. TESTIMONIALS SECTION STYLES --- */
+.testimonials-section {
+    padding: 100px 50px;
+    background-color: #050505;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.client-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.client-role {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* --- 5. FAQ SECTION STYLES (PURE CSS ACCORDION) --- */
+.faq-section {
+    padding: 100px 50px;
+    background-color: #000;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    list-style: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-answer {
+    padding: 0 24px 24px 24px;
+    color: #888;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.faq-item[open] {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.faq-item[open] .faq-question {
+    font-weight: 600;
+}
+
+/* --- 6. SCROLL TO TOP BUTTON STYLES --- */
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #fff;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 99;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    background-color: #e5e5e5;
+}
+
